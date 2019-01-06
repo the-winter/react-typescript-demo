@@ -8,20 +8,23 @@ export class Header extends React.Component<HeaderProps> {
   constructor(props) {
     super(props);
     this.state = {
-      english: "Serbian Choir Red Peonies",
-      serbian: "Српски Хор Црвени Божури"
+      title: "Legendary Title"
     };
   }
   render() {
-    const { english, serbian } = this.state;
+    const { title } = this.state;
     return (
       <div className="header">
-        <div>
-          <img src={headerImage} width="700px" />
+        <div className="header-title">
+          <h1>{title}</h1>
         </div>
-        <div>
-          <h1>{serbian}</h1>
-          <h1>{english}</h1>
+        <div className="nav">
+          <div>
+            <p>Home</p>
+            <p>About</p>
+            <p>Services</p>
+            <p>Contact</p>
+          </div>
         </div>
       </div>
     );

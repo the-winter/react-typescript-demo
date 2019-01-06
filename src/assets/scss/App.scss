@@ -1,27 +1,35 @@
 $bg-color: yellow;
 $border-color: red;
 
+.body {
+  margin: 0px;
+}
+
 .holygrail-body {
-  flex: 1 0 auto;
+  // flex: 1 0 auto;
   display: flex;
 
   .content {
-    flex: 1 0 auto;
+    flex-grow: 2;
     font-family: helvetica, arial, sans-serif;
-    padding: 2em;
     border: 5px solid $border-color;
     display: flex;
     flex-direction: column;
+    min-width: 600px;
   }
 
   .sidebar {
-    width: 250px;
+    flex-grow: 1;
     min-width: 150px;
     list-style: none;
     text-align: left;
     order: -1;
-    background: yellow;
     margin: 0;
+  }
+
+  .aside {
+    flex-grow: 1;
+    min-width: 150px;
   }
 }
 
@@ -32,8 +40,25 @@ $border-color: red;
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-}
 
-p {
-  background-color: $bg-color;
+  .header-title {
+    background: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    background: #d1c6c0;
+    width: 100%;
+    div {
+      display: flex;
+      flex-direction: row;
+    }
+    p {
+      margin: 15px;
+    }
+  }
 }
