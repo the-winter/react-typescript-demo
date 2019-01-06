@@ -1,12 +1,39 @@
 $bg-color: yellow;
 $border-color: red;
 
-.app {
-  font-family: helvetica, arial, sans-serif;
-  padding: 2em;
-  border: 5px solid $border-color;
+.holygrail-body {
+  flex: 1 0 auto;
+  display: flex;
 
-  p {
-    background-color: $bg-color;
+  .content {
+    flex: 1 0 auto;
+    font-family: helvetica, arial, sans-serif;
+    padding: 2em;
+    border: 5px solid $border-color;
+    display: flex;
+    flex-direction: column;
   }
+
+  .sidebar {
+    width: 250px;
+    min-width: 150px;
+    list-style: none;
+    text-align: left;
+    order: -1;
+    background: yellow;
+    margin: 0;
+  }
+}
+
+.header {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+p {
+  background-color: $bg-color;
 }
