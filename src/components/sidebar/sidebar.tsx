@@ -1,6 +1,9 @@
 import * as React from "react";
 
-export class Sidebar extends React.Component<undefined> {
+interface ComponentProps {
+}
+
+export class Sidebar extends React.Component<ComponentProps> {
   constructor(props) {
     super(props);
     this.state = {

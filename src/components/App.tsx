@@ -3,32 +3,33 @@ import "./../assets/scss/App.scss";
 import { Header } from "./header/header";
 import { Sidebar } from "./sidebar/sidebar";
 import { Content } from "./content/content";
-import { Aside } from "./sidebar/aside";
+import { Aside } from "./aside/aside";
 
 const reactLogo = require("./../assets/img/react_logo.svg");
 
-export interface AppProps {}
+interface AppProps {
+  englishFlag: boolean;
+  english: string;
+}
 
-export default class App extends React.Component<AppProps, undefined> {
+export default class App extends React.Component<AppProps> {
   constructor(props) {
     super(props);
-
-    this.state = {
-      englishFlag: true,
-      english: "now its true",
-      serbian: "cao cao tamo i vamo"
-    };
   }
+  state = {
+    englishFlag: true,
+    english: "future technology example 1",
+  };
 
   changeLanguage() {
-    const { englishFlag, english, serbian } = this.state;
+    const { englishFlag } = this.state;
 
-    if (englishFlag == true) {
+    if (englishFlag === true) {
       this.setState({ englishFlag: false });
-      this.setState({ english: "now its false" });
+      this.setState({ english: "future technology example 2" });
     } else {
       this.setState({ englishFlag: true });
-      this.setState({ english: "now its true" });
+      this.setState({ english: "future technology example 1" });
     }
   }
 

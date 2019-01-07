@@ -15,7 +15,13 @@ $border-color: red;
     border: 5px solid $border-color;
     display: flex;
     flex-direction: column;
-    min-width: 600px;
+    min-width: 500px;
+    max-width: 700px;
+
+    button {
+      width: 100px;
+      height: 50px;
+    }
   }
 
   .sidebar {
@@ -30,6 +36,33 @@ $border-color: red;
   .aside {
     flex-grow: 1;
     min-width: 150px;
+    padding: 5px;
+    background: #81c3f8;
+    margin: 5px 5px;
+    border-radius: 3px;
+
+    .suggestion-row {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid gray;
+      border-radius: 3px;
+      padding: 3px;
+      margin-bottom: 3px;
+      background: #fcfbfb;
+
+      span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    form input {
+      width: calc(100% - 38px);
+      padding: 5px;
+      border-radius: 3px;
+      border: 1px solid gray;
+    }
   }
 }
 
